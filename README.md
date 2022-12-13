@@ -11,7 +11,7 @@ El desarrrollo del BACKEND del aplicativo se divide en 2 partes que se detallara
 
 - Se realiza el analisis de los criterios de aceptacion de cada una de las historias de usuario, para proceder a realizar diseño y desarrollo de la aplicación.
 
-- Se diseña el modelo de datos para el desarrollo de la aplicacion.
+- Se diseña el modelo de datos para el desarrollo de la aplicacion.(REVISAR EL MODELO EN LA CARPETA: /vacunacion/otros/)
 
 - Se procede a generar el proyecto con SpringBoot en el Spring Initializr (https://start.spring.io/). Seleccionamos Maven, Java 8 y SpringBoot 2.7.6. Ademas se agregan las dependencias necesarias Spring Web, Data JPA, PostgreSQL Driver. 
 
@@ -24,7 +24,7 @@ El desarrrollo del BACKEND del aplicativo se divide en 2 partes que se detallara
 - Se crean las interfaces de tipo Repository que extienden a JPARepository y nos permitiran realizar las operaciones necesarias con los datos.
 
 - Se crean los servicios para cada una de las funcionalidades solicitadas en el package Service, en estas se implementaran la logica del negocio.
--  
+ 
 - Se crea la clase ValidacionUtils situada en el package util, esta contiene los metodos de las validaciones de los campos solicitados en los criterios de aceptacion.
 
 - Se crean los endpoints para cada operacion en las clases del package controller.
@@ -50,11 +50,11 @@ spring.datasource.username=postgres
 spring.datasource.password=
 ```
 
-- Se procede a ejecutar la aplicacion
+- Se procede a ejecutar la aplicacion en el IDE.
 
 - Dado que la propiedad de JPA esta como update el esquema de la base de datos se completara en base a los mapeos de las entidades.
 
--  Ejecutar el siguiente query directamente en la base de datos para ingresar los tipos de vacunas disponibles
+-  Ejecutar el siguiente query directamente en la base de datos para ingresar los tipos de vacunas disponibles:
 
 ```INSERT INTO vacunas(nombre) VALUES ('Sputnik'), ('AstraZeneca'),('Pfizer'),('Jhonson&Jhonson');```
 
@@ -62,5 +62,5 @@ spring.datasource.password=
 
 http://localhost:8080/swagger-ui/index.html
 
-- Se puede proceder a revisar y realizar las pruebas de los servicios web disponibles.
+- Finalmente, se puede proceder a revisar y realizar las pruebas de los servicios web disponibles.
 
